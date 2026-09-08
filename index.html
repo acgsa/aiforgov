@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI for GOV — U.S. Department of Commerce [Wireframe]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="_assets/usds/globals.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- USG Ribbon (USDS component) -->
+  <div class="usg-ribbon">
+    <div class="usg-ribbon-content">
+      <img src="_assets/usds/us_flag_small.svg" alt="U.S. flag" width="16" height="11" />
+      <span class="usg-ribbon-text">An official website of the United States government</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <img src="_assets/seal.png" alt="U.S. Department of Commerce seal" class="brand-seal" />
+        <span class="brand-text">
+          <span class="brand-name">AI for GOV</span>
+          <span class="brand-agency">U.S. Department of Commerce</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#advancing">How it works</a>
+        <a href="#reviewers">National AI Center</a>
+      </nav>
+      <a href="#submit" class="btn btn-cta btn-header">Submit a Project</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Animated hero -->
+    <section class="hero" aria-label="Introduction">
+      <div class="container">
+        <p class="kicker">U.S. Department of Commerce &mdash; AI for GOV</p>
+        <h1 class="hero-headline">
+          American AI, built for<br />
+          <span class="rotator" id="rotator" aria-live="polite">
+            <span class="rotator-phrase is-active">faster passport processing</span>
+          </span>
+        </h1>
+        <p class="hero-sub">
+          A national effort to put artificial intelligence to work for the American
+          people &mdash; across every agency, mission, and service.
+        </p>
+        <div class="hero-actions">
+          <a href="#submit" class="btn btn-cta btn-lg-cta">Submit your project idea</a>
+        </div>
+      </div>
+      <div class="hero-ticker" aria-hidden="true">
+        <div class="ticker-track" id="ticker"></div>
+      </div>
+    </section>
+
+    <!-- How it works (program steps, per National AI Center blurb) -->
+    <section class="section section-center" id="advancing" aria-labelledby="advancing-heading">
+      <div class="container">
+        <p class="kicker">How it works</p>
+        <h2 class="section-heading" id="advancing-heading">Pilot to deployment in about 90 days</h2>
+        <div class="card-grid">
+          <article class="card">
+            <div class="step-num" aria-hidden="true">1</div>
+            <h3>Submit your project</h3>
+            <p>Tell the National AI Center what you want to build — your product, your team, and the government problem it solves.</p>
+          </article>
+          <article class="card">
+            <div class="step-num" aria-hidden="true">2</div>
+            <h3>Join Cohort 1</h3>
+            <p>Selected teams join Cohort 1 &mdash; the first cohort path to sell into the U.S. government, with GSA contracts and ATOs included.</p>
+          </article>
+          <article class="card">
+            <div class="step-num" aria-hidden="true">3</div>
+            <h3>Pilot, then deploy</h3>
+            <p>Run by the Center: go from pilot to deployment across federal agencies in about 90 days.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA + expanding submission form (National AI Center) -->
+    <section class="section section-submit" id="submit" aria-labelledby="submit-heading">
+      <div class="container narrow">
+        <p class="kicker">Submit your project</p>
+        <h2 class="section-heading" id="submit-heading">Have an AI project for the federal government?</h2>
+        <p class="section-sub">
+          Submissions are reviewed by the National AI Center. Tell us what you want to build.
+        </p>
+        <button class="btn btn-cta btn-lg-cta" id="form-toggle" aria-expanded="false" aria-controls="form-panel">
+          Start your submission
+        </button>
+
+        <div class="form-panel" id="form-panel" hidden>
+          <form id="submit-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-name">Full name</label>
+                <input id="f-name" name="name" type="text" required autocomplete="name" />
+              </div>
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" required placeholder="you@example.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="f-agency">Agency or organization</label>
+                <input id="f-agency" name="agency" type="text" required />
+              </div>
+              <div class="field">
+                <label for="f-category">Project category</label>
+                <select id="f-category" name="category" required>
+                  <option value="">Select a category&hellip;</option>
+                  <option>Citizen services</option>
+                  <option>Claims &amp; benefits processing</option>
+                  <option>Disaster response &amp; mapping</option>
+                  <option>Export licensing &amp; trade</option>
+                  <option>Fraud detection</option>
+                  <option>Permitting &amp; procurement</option>
+                  <option>Scientific forecasting</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-title">Project title</label>
+              <input id="f-title" name="title" type="text" required />
+            </div>
+            <div class="field">
+              <label for="f-desc">Describe the project</label>
+              <textarea id="f-desc" name="description" rows="5" required
+                placeholder="What problem does it solve? What AI capability does it use?"></textarea>
+            </div>
+            <div class="field">
+              <label for="f-impact">Expected impact</label>
+              <textarea id="f-impact" name="impact" rows="3"
+                placeholder="Who benefits, and how will you measure success?"></textarea>
+            </div>
+            <label class="checkbox-field">
+              <input type="checkbox" name="alignment" />
+              <span>This project aligns with an existing AI.GOV initiative or the AI Action Plan.</span>
+            </label>
+            <div class="form-actions">
+              <button type="button" class="btn btn-ghost" id="form-cancel">Cancel</button>
+              <button type="submit" class="btn btn-cta">Submit Your Project</button>
+            </div>
+          </form>
+          <div class="form-success" id="form-success" hidden role="status">
+            <h3>Submission received</h3>
+            <p>
+              Thank you. The National AI Center reviews new submissions on a rolling
+              basis and will follow up by email.
+            </p>
+            <button type="button" class="btn btn-ghost" id="form-reset">Submit another project</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- National AI Center blurb -->
+    <section class="section" id="reviewers" aria-labelledby="reviewers-heading">
+      <div class="container narrow center-blurb">
+        <p class="kicker">Who reviews your submission</p>
+        <h2 class="section-heading" id="reviewers-heading">The National AI Center</h2>
+        <p class="section-sub">
+          The National AI Center is the federal hub for AI project submissions &mdash; run
+          by the Department of Commerce to move the best ideas from proposal to
+          deployment in about 90 days.
+        </p>
+        <a class="card-link" href="#">Visit the National AI Center &rarr;</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="_assets/seal.png" alt="" class="footer-seal" />
+        <p>AI for GOV<br /><span>U.S. Department of Commerce</span></p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>Initiatives</h4>
+          <a href="#">AI Action Plan</a>
+          <a href="#">AI Exports</a>
+          <a href="#">Education</a>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <a href="#">AI.GOV</a>
+          <a href="#">The White House</a>
+          <a href="#">News</a>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="#">info@aiforgov.gov</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-legal">
+      <a href="#">Copyright</a>
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <div class="wireframe-tag" aria-hidden="true">WIREFRAME v0.1 &mdash; for direction approval</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
