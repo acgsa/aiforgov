@@ -2,6 +2,10 @@
 
 Static wireframe/prototype for an "AI for GOV" concept site (U.S. Department of Commerce).
 
+Copy is built around the National AI Center's positioning: *the U.S. government's gateway
+for AI — open in both directions, connecting builders, buyers, and government. A place for
+expertise, and a catalyst for deals.*
+
 **Live preview:** https://acgsa.github.io/aiforgov/
 
 ## Contents
