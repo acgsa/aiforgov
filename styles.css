@@ -17,6 +17,8 @@
 
 :root {
   --font-display: "Instrument Serif", Georgia, serif;
+  /* vertical rhythm between major sections (scales with viewport) */
+  --section-pad: clamp(64px, 8vw, 112px);
   /* light-blue CTA (cyan, per AI Council module) */
   --cta-bg: #0891B2;
   --cta-bg-hover: #0AB6D9;
@@ -215,7 +217,11 @@ body {
 }
 
 /* ---------- Sections ---------- */
-.section { padding: var(--space-3xl) 0; }
+.section { padding: var(--section-pad) 0; }
+/* adjacent same-background sections would otherwise read as one block */
+.section + .section { border-top: var(--border-sm) solid var(--color-border); }
+.section + .section-submit,
+.section-submit + .section { border-top: none; }
 .section-heading {
   font-family: var(--font-display);
   font-weight: 400;
@@ -375,8 +381,8 @@ body {
 .site-footer {
   background: var(--navy);
   color: var(--on-dark);
-  padding: var(--space-2xl) 0 var(--space-lg);
-  margin-top: var(--space-2xl);
+  padding: var(--space-3xl) 0 var(--space-lg);
+  margin-top: var(--section-pad);
 }
 .footer-inner {
   display: flex;
