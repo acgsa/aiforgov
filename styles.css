@@ -89,30 +89,13 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
   text-decoration: none;
-  color: var(--on-dark);
 }
-.brand-seal { width: 44px; height: 44px; object-fit: contain; filter: brightness(0) invert(1); }
-.brand-divider {
-  width: var(--border-sm, 1px);
-  align-self: stretch;
-  margin: var(--space-3xs) 0;
-  background: rgba(255, 255, 255, 0.25);
-}
-.brand-text { display: flex; flex-direction: column; gap: var(--space-3xs); line-height: 1.2; }
 /* AI for GOV brand lockup (white artwork, sits on navy header) */
 .brand-logo {
   display: block;
-  height: 24px;
+  height: 30px;
   width: auto;
-}
-.brand-agency {
-  font-size: var(--font-size-body-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--on-dark);
-  opacity: 0.65;
 }
 .site-nav {
   display: flex;
@@ -400,17 +383,8 @@ body {
   padding-bottom: var(--space-xl);
   border-bottom: var(--border-sm) solid rgba(255, 255, 255, 0.15);
 }
-.footer-brand { display: flex; gap: var(--space-md); align-items: center; }
-.footer-seal { width: 56px; height: 56px; object-fit: contain; filter: brightness(0) invert(1); }
-.footer-brand-text { display: flex; flex-direction: column; gap: var(--space-2xs); }
-.footer-logo { display: block; height: 30px; width: auto; }
-.footer-brand span {
-  font-family: var(--font-primary);
-  font-size: var(--font-size-body-xs);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  opacity: 0.7;
-}
+.footer-brand { display: flex; align-items: flex-start; }
+.footer-logo { display: block; height: 34px; width: auto; }
 .footer-cols { display: flex; gap: var(--space-3xl); margin-left: auto; flex-wrap: wrap; }
 .footer-cols h4 {
   color: var(--on-dark);
@@ -463,8 +437,8 @@ body {
   .form-row { grid-template-columns: 1fr; }
   .footer-cols { margin-left: 0; }
   /* keep the brand lockup legible without crowding the header CTA */
-  .brand-logo { height: 20px; }
-  .footer-logo { height: 24px; }
+  .brand-logo { height: 24px; }
+  .footer-logo { height: 28px; }
   /* allow wrapping: full-width static-flow centering */
   .rotator-phrase { white-space: normal; left: 0; width: 100%; text-align: center; transform: translateY(0.35em); }
   .rotator-phrase.is-active { transform: translateY(0); }
